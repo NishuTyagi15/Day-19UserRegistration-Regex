@@ -7,17 +7,20 @@ import java.util.regex.Pattern;
 public class UserValidation {
     public static void main(String[] args) {
         System.out.println("Enter your First Name: ");
-        System.out.println("Enter your Last Name : ");
+        System.out.println("Enter your Last Name: ");
         Scanner S = new Scanner(System.in);
         String fname = S.next();
         String lname = S.next();
 
-        String regex = "^[A-Z]{1}[a-z]{2,}$";
+        String regex1 = "^[A-Z]{1}[a-z]{2,}$";
 
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(lname);
+        Pattern pattern1 = Pattern.compile(regex1);
+        Pattern pattern2 = Pattern.compile(regex1);
 
-        System.out.println(fname + " : " + matcher.matches());
-        System.out.println(lname + " : " + matcher.matches());
+        Matcher matcher1 = pattern1.matcher(fname);
+        Matcher matcher2 = pattern2.matcher(lname);
+
+        System.out.println(fname + " : " + matcher1.matches());
+        System.out.println(lname + " : " + matcher2.matches());
     }
 }
