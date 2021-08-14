@@ -15,7 +15,7 @@ public class UserValidation {
         String regex = "^[A-Z]{1}[a-z]{2,}$";
 
         Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(fname);
+        Matcher matcher = pattern.matcher(lname);
 
         System.out.println(fname + " : " + matcher.matches());
         System.out.println(lname + " : " + matcher.matches());
