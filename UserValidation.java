@@ -22,7 +22,7 @@ public class UserValidation {
         String regex2 = "^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*"+
                          "@([0-9a-zA-Z][-]?)+[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?$";
         String regex3 = "^(91(\s){0,1})(\\d{10})$";
-        String regex4 = "^[0-9a-z](?=.*[A-Z]).{8,20}$";
+        String regex4 = "^(?=.*[A-Z])[0-9a-z].{8,}$";
 
         Pattern pattern1 = Pattern.compile(regex1);
         Pattern pattern2 = Pattern.compile(regex1);
